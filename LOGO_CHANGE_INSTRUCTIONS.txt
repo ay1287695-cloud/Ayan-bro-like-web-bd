@@ -1,0 +1,23 @@
+=============================================================================
+             AYAN'S FF VIP HUB - LOGO/PICTURE CHANGE INSTRUCTIONS
+=============================================================================
+
+[ENG] How to change the header logo picture:
+--------------------------------------------
+1. Open the file named `/src/config.ts` in your code editor.
+2. Find the line:
+   `HEADER_LOGO_URL: "https://nirob-free-fire-baner.vercel.app/profile?uid=2279016714",`
+3. Replace the URL inside the quotes with your own picture URL (e.g. Imgur link, Discord image link, or Garena profile URL).
+4. Save the file. The header logo next to "AYAN'S FF VIP HUB" will update instantly!
+
+[BANG] লোগো/ছবি পরিবর্তন করার নিয়ম:
+------------------------------------
+১. কোড এডিটর থেকে `/src/config.ts` ফাইলটি ওপেন করুন।
+২. এই লাইনটি খুঁজুন:
+   `HEADER_LOGO_URL: "https://nirob-free-fire-baner.vercel.app/profile?uid=2279016714",`
+৩. কোটেশনের ("...") ভেতরে থাকা ইউআরএল-টি পরিবর্তন করে আপনার নিজের ছবির ইউআরএল বসিয়ে দিন (যেমন: ইমগুর লিঙ্ক, ডিসকর্ড লিঙ্ক, বা গ্যারেনা লিঙ্ক)।
+৪. ফাইলটি সেভ করুন। সাথে সাথে "AYAN'S FF VIP HUB" লেখার পাশের লোগোটি আপনার ছবিতে পরিবর্তিত হয়ে যাবে!
+
+=============================================================================
+                      THANK YOU FOR USING FF VIP HUB!
+=============================================================================

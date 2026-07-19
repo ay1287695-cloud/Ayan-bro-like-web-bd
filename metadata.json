@@ -1,0 +1,6 @@
+{
+  "name": "Ayan Free Fire Like & Profile VIP",
+  "description": "A premium, high-quality Free Fire profile viewer and automated like injector featuring live avatar banners, real-time statistics tracking, and interactive glowing animations designed for AYAN.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
