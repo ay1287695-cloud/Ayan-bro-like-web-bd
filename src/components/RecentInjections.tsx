@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { History, Trash2, Heart, Search, Check, AlertTriangle, ArrowRight, X, Trash } from 'lucide-react';
+import { History, Trash2, Heart, Search, Check, CheckCircle2, AlertTriangle, ArrowRight, X, Trash } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { HistoryItem, SERVER_OPTIONS } from '../types';
 import { sfx } from '../utils/audio';
@@ -139,12 +139,9 @@ export const RecentInjections: React.FC<RecentInjectionsProps> = ({
                 <div className="flex items-center justify-between sm:justify-end gap-4 w-full sm:w-auto pt-2.5 sm:pt-0 border-t border-slate-900 sm:border-0">
                   {item.status === 'success' ? (
                     <div className="text-right">
-                      <span className="text-[10px] font-mono text-emerald-500 flex items-center gap-0.5 justify-end font-bold">
-                        <Heart className="w-3 h-3 fill-emerald-500" /> +6 Likes
+                      <span className="text-[10px] font-mono text-emerald-500 flex items-center gap-1 justify-end font-bold">
+                        <CheckCircle2 className="w-3 h-3" /> success like push
                       </span>
-                      <div className="text-[9px] font-mono text-slate-500">
-                        {item.likesBefore} → <span className="text-emerald-400">{item.likesAfter}</span>
-                      </div>
                     </div>
                   ) : (
                     <div className="text-right">

@@ -23,37 +23,37 @@ export const FAQ: React.FC = () => {
 
   const faqData: FAQItem[] = [
     {
-      question: 'আমি কীভাবে আমার গ্যারেনা ফ্রি ফায়ার UID খুঁজে পাবো?',
+      question: 'Ami kivabe amar Garena Free Fire UID khuje pabo?',
       answer: (
         <p className="text-xs leading-relaxed text-slate-400">
-          ফ্রি ফায়ার গেমটি ওপেন করুন, লবির বাম কোণে থাকা আপনার প্লেয়ার প্রোফাইল ব্যানারে ট্যাপ করুন। 
-          সেখানে আপনার নম্বর আইডি (যেমন: <code>2279016714</code>) দেখতে পাবেন এবং আইডি-টি কপি করার জন্য ডান পাশের কপি বাটনে চাপুন।
+          Free Fire game-ti open korun, lobby-r bam kone thaka apnar player profile banner-e tap korun. 
+          Sekhane apnar number ID (Jemon: <code>2279016714</code>) dekhte paben ebong ID-ti copy korar jonno dan pasher copy button-e chapun.
         </p>
       )
     },
     {
-      question: 'এই লাইক ইঞ্জেক্টর সিস্টেমটি ব্যবহার করা কি সম্পূর্ণ নিরাপদ?',
+      question: 'Ei Like Injector system-ti byabohar kora ki sompurno nirapod?',
       answer: (
         <p className="text-xs leading-relaxed text-slate-400">
-          হ্যাঁ, এটি ১০০% নিরাপদ। আমাদের সিস্টেমে প্রোফাইল লাইক আপডেট করতে গ্যারেনা আঞ্চলিক বাইপাস গেটওয়ে ব্যবহার করা হয়। 
-          এখানে আপনার কোনো অ্যাকাউন্ট লগইন, ইমেইল বা ফেসবুক পাসওয়ার্ডের প্রয়োজন হয় না। তাই আইডি সাসপেন্ড বা ব্যান হওয়ার কোনো ঝুঁকি নেই।
+          Hya, eti 100% nirapod. Amader system-e profile like update korte Garena regional bypass gateway byabohar kora hoy. 
+          Ekhane apnar kono account login, email ba Facebook password-er proyojon hoy na. Tai ID suspend ba ban hoar kono jhunki nei.
         </p>
       )
     },
     {
-      question: 'প্রতিদিনের লাইক লিমিট (Like Limit) কত?',
+      question: 'Protidiner Like Limit koto?',
       answer: (
         <p className="text-xs leading-relaxed text-slate-400">
-          গ্যারেনা সার্ভার অনুযায়ী প্রতিটি ইউআইডিতে (UID) ২৪ ঘণ্টায় সর্বোচ্চ ৯০টি পর্যন্ত লাইক যুক্ত করা সম্ভব। 
-          যদি কোনো কারণে আপনার ইনজেকশন ব্লক দেখায়, তাহলে বুঝতে হবে আপনার আজকের কোটা শেষ হয়ে গেছে অথবা পরের দিন পর্যন্ত অপেক্ষা করতে হবে।
+          Garena server onujayi protiti UID-te 24 ghantay sorbochcho 90-ti porjonto like juktto kora somvob. 
+          Jodi kono karone apnar injection block dekhay, tahole bujhte hobe apnar ajker quota shesh hoye geche othoba porer din porjonto opekkha korte hobe.
         </p>
       )
     },
     {
-      question: 'কেন প্লেয়ার কার্ড ব্যানার ইমেজ লোড হতে সমস্যা হচ্ছে?',
+      question: 'Keno player card banner image load hote somossya hochche?',
       answer: (
         <p className="text-xs leading-relaxed text-slate-400">
-          প্লেয়ার ব্যানার সরাসরি গ্যারেনা রিয়েল-টাইম ডেটাবেস থেকে রেন্ডার হয়। যদি লোড হতে সমস্যা হয়, তাহলে আপনার UID-টি সঠিক আছে কি না এবং প্লেয়ারটি বিডি (BD) বা ইন্ডিয়া (IND) সার্ভারে সক্রিয় আছে কি না তা যাচাই করুন। সার্ভার ট্রাফিকের কারণেও সাময়িক দেরি হতে পারে।
+          Player banner shorasori Garena real-time database theke render hoy. Jodi load hote somossya hoy, tahole apnar UID-ti sothik ache ki na ebong player-ti BD ba IND server-e sokriyo ache ki na ta jachai korun. Server traffic-er karoneo samoyik deri hote pare.
         </p>
       )
     }
@@ -63,7 +63,7 @@ export const FAQ: React.FC = () => {
     <div className="rounded-2xl bg-slate-950/80 border border-slate-800 p-6 shadow-xl backdrop-blur-md space-y-4" id="faq-accordion-container">
       <div className="flex items-center gap-2">
         <HelpCircle className="w-5 h-5 text-slate-400" />
-        <h3 className="text-base font-bold text-slate-200">হেল্প এবং সার্ভারের নিয়মাবলী (Help & Rules)</h3>
+        <h3 className="text-base font-bold text-slate-200">Help ebong Server-er Niyomaboli (Help & Rules)</h3>
       </div>
 
       <div className="space-y-2.5">
@@ -107,15 +107,15 @@ export const FAQ: React.FC = () => {
         <div className="p-3 bg-amber-500/5 border border-amber-500/10 rounded-xl flex items-start gap-2">
           <Award className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
           <div className="space-y-0.5">
-            <span className="text-[10px] font-bold text-amber-500 font-mono uppercase">ভিআইপি গ্র্যান্ডমাস্টার সুবিধা</span>
-            <p className="text-[9px] text-slate-500 font-mono">বিডি (BD) এবং ইন্ডিয়া (IND) সার্ভারে ইনস্ট্যান্ট বুস্ট সুবিধা সক্রিয়।</p>
+            <span className="text-[10px] font-bold text-amber-500 font-mono uppercase">VIP Grandmaster Subidha</span>
+            <p className="text-[9px] text-slate-500 font-mono">BD ebong IND server-e instant boost subidha sokriyo.</p>
           </div>
         </div>
         <div className="p-3 bg-cyan-500/5 border border-cyan-500/10 rounded-xl flex items-start gap-2">
           <Cpu className="w-4 h-4 text-cyan-500 shrink-0 mt-0.5" />
           <div className="space-y-0.5">
-            <span className="text-[10px] font-bold text-cyan-500 font-mono uppercase">এপিআই স্থায়িত্ব মনিটর</span>
-            <p className="text-[9px] text-slate-500 font-mono">আমাদের বাইপাস গেটওয়ে ৯৯.৮% সচল রয়েছে।</p>
+            <span className="text-[10px] font-bold text-cyan-500 font-mono uppercase">API Sthayitto Monitor</span>
+            <p className="text-[9px] text-slate-500 font-mono">Amader bypass gateway 99.8% shochol royeche.</p>
           </div>
         </div>
       </div>

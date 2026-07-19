@@ -295,7 +295,7 @@ export const ProfileViewer: React.FC<ProfileViewerProps> = ({
         </div>
 
         {/* Live Banner Crop Image */}
-        <div className="relative w-full rounded-xl overflow-hidden border border-cyan-500/20 bg-black min-h-[90px] flex items-center justify-center group">
+        <div className="relative w-full rounded-xl overflow-hidden border border-cyan-500/20 bg-black min-h-[100px] flex items-center justify-center group">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/2 to-transparent bg-[length:100%_4px] pointer-events-none" />
 
           {loading && (
@@ -324,7 +324,8 @@ export const ProfileViewer: React.FC<ProfileViewerProps> = ({
               setLoading(false);
               setError(true);
             }}
-            className="w-full h-auto object-cover max-h-[140px] select-none"
+            className="w-full h-auto object-contain select-none transition-all duration-700 opacity-0"
+            style={{ opacity: loading ? 0 : 1 }}
           />
         </div>
 

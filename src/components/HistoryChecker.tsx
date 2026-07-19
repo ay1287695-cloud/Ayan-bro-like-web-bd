@@ -202,11 +202,11 @@ export const HistoryChecker: React.FC<HistoryCheckerProps> = ({ history, onSelec
                         <div className="sm:text-right pt-2 sm:pt-0 border-t border-slate-900 sm:border-0 w-full sm:w-auto">
                           {isSuccess ? (
                             <div className="text-[11px] text-slate-300">
-                              আগের লাইক: <span className="text-slate-400">{log.likesBefore}</span> ➔ বর্তমান লাইক: <span className="text-emerald-400 font-black">{log.likesAfter}</span>
+                              Ager Like: <span className="text-slate-400">{log.likesBefore}</span> ➔ Bortoman Like: <span className="text-emerald-400 font-black">{log.likesAfter}</span>
                             </div>
                           ) : (
                             <div className="text-[10px] text-red-400 truncate max-w-[250px]" title={log.message}>
-                              কারণ (Reason): {log.message}
+                              Karon (Reason): {log.message}
                             </div>
                           )}
                         </div>

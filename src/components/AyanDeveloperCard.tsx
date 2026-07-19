@@ -222,9 +222,9 @@ export const AyanDeveloperCard: React.FC<AyanDeveloperCardProps> = ({ onLoadUID 
           <div className="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80 flex items-start gap-3">
             <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
             <div className="space-y-1">
-              <span className="text-[9px] font-mono text-slate-200 uppercase tracking-widest block font-bold">Signature (উক্তি)</span>
+              <span className="text-[9px] font-mono text-slate-200 uppercase tracking-widest block font-bold">Signature (Ukti)</span>
               <p className="text-xs text-white italic font-medium leading-relaxed">
-                "{ownerInfo?.socialInfo?.signature || 'নদীর ওপর আকাশ উড়ে..!  :)'}"
+                "{ownerInfo?.socialInfo?.signature || 'Nodir opor akash ure..!  :)'}"
               </p>
             </div>
           </div>

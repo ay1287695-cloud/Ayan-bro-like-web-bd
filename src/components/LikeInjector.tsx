@@ -73,7 +73,7 @@ export const LikeInjector: React.FC<LikeInjectorProps> = ({ uid, onUidChange, on
       'Injecting proxy handshake to bypass Cloudflare firewall protection...',
       `Validating UID ${localUid} on regional server database: ${selectedServer.toUpperCase()} region...`,
       'Synchronizing remote packet buffer storage...',
-      'Routing 6x high-tier visual reputation packets through API gateway...',
+      'Routing VIP high-tier visual reputation packets through API gateway...',
       'Finalizing cryptographic signatures and registering new likes count...'
     ];
 
@@ -177,7 +177,7 @@ export const LikeInjector: React.FC<LikeInjectorProps> = ({ uid, onUidChange, on
           VIP Garena Auto-Likes Injector
         </h3>
         <p className="text-xs text-slate-400 mt-1">
-          Instantly dispatch 6x high-rank game likes to boost player profiles. Safe, fully secure, and OB54 compliant.
+          Instantly dispatch VIP high-rank game likes to boost player profiles. Safe, fully secure, and OB54 compliant.
         </p>
       </div>
 
@@ -391,78 +391,80 @@ export const LikeInjector: React.FC<LikeInjectorProps> = ({ uid, onUidChange, on
             <div className="sm:text-right">
               <span className="inline-flex items-center gap-1.5 text-[10px] font-mono text-emerald-400 font-black px-4 py-1.5 bg-emerald-500/10 border border-emerald-500/30 rounded-full animate-pulse shadow-[0_0_15px_rgba(16,185,129,0.25)]">
                 <Heart className="w-4 h-4 fill-emerald-400" />
-                +{likesAdded} VIP {likesAdded === 1 ? 'LIKE' : 'LIKES'} INJECTED
+                VIP LIKES INJECTED
               </span>
             </div>
           </div>
 
           {/* User's request: Add Avatar Banner to success view */}
-          <div className="space-y-2">
-            <span className="text-[10px] font-mono text-white uppercase tracking-widest block font-bold">
-              TARGET IN-GAME AVATAR BANNER
-            </span>
-            <div className="relative w-full rounded-xl overflow-hidden border border-emerald-500/40 bg-black/80 aspect-[4.8/1] min-h-[75px] flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.8)]">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/3 to-transparent bg-[length:100%_4px] pointer-events-none z-10" />
-              <img
-                src={`https://nirob-free-fire-baner.vercel.app/profile?uid=${response.UID || localUid}`}
-                alt="Player Banner Preview"
-                referrerPolicy="no-referrer"
-                className="w-full h-auto object-cover max-h-[140px] select-none"
-                onLoad={(e) => {
-                  (e.target as HTMLImageElement).classList.add('opacity-100');
-                }}
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = `https://nirob-free-fire-baner.vercel.app/profile?uid=2279016714`;
-                }}
-              />
-            </div>
-          </div>
-
-          {/* Player details grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-950 border border-slate-800 rounded-2xl p-5 shadow-inner">
-            <div className="space-y-1">
-              <span className="text-[10px] font-mono text-slate-300 uppercase tracking-widest block font-bold">Player Nickname</span>
-              <div className="text-lg font-black text-white uppercase flex items-center gap-2 truncate">
-                <Sparkles className="w-5 h-5 text-amber-400 animate-pulse shrink-0" />
-                {response.PlayerNickname || '—͞UNKNOWN PLAYER'}
-              </div>
-            </div>
-            <div className="space-y-1">
-              <span className="text-[10px] font-mono text-slate-300 uppercase tracking-widest block font-bold">Daily API Pool Remaining</span>
-              <div className="text-xs font-black font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1.5 rounded-lg inline-block">
-                {response.remains || '84/90 Likes Left Today'}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+            <div className="space-y-2">
+              <span className="text-[10px] font-mono text-white uppercase tracking-widest block font-bold">
+                TARGET IN-GAME AVATAR BANNER
+              </span>
+              <div className="relative w-full rounded-xl overflow-hidden border border-emerald-500/40 bg-black/80 min-h-[100px] flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.8)]">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/3 to-transparent bg-[length:100%_4px] pointer-events-none z-10" />
+                <img
+                  src={`https://nirob-free-fire-baner.vercel.app/profile?uid=${response.UID || localUid}`}
+                  alt="Player Banner Preview"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-auto object-contain select-none"
+                  onLoad={(e) => {
+                    (e.target as HTMLImageElement).classList.add('opacity-100');
+                  }}
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = `https://nirob-free-fire-baner.vercel.app/profile?uid=2279016714`;
+                  }}
+                />
               </div>
             </div>
 
-            <div className="md:col-span-2 pt-4 border-t border-slate-900 space-y-4">
-              {/* Large, Beautiful Likes comparison flow */}
-              <div className="bg-slate-900/95 border border-emerald-500/20 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div className="space-y-4">
+              {/* Player details grid */}
+              <div className="grid grid-cols-2 gap-3 bg-slate-950 border border-slate-800 rounded-2xl p-4 shadow-inner">
                 <div className="space-y-1">
-                  <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest block font-bold">আগের লাইক (BEFORE LIKES)</span>
-                  <div className="text-2xl font-black font-mono text-slate-300">
+                  <span className="text-[10px] font-mono text-slate-300 uppercase tracking-widest block font-bold">Nickname</span>
+                  <div className="text-base font-black text-white uppercase flex items-center gap-2 truncate">
+                    <Sparkles className="w-4 h-4 text-amber-400 animate-pulse shrink-0" />
+                    {response.PlayerNickname || '—͞UNKNOWN'}
+                  </div>
+                </div>
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-slate-300 uppercase tracking-widest block font-bold">API Pool</span>
+                  <div className="text-[10px] font-black font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-1 rounded-lg inline-block">
+                    {response.remains || '84/90 Left'}
+                  </div>
+                </div>
+              </div>
+
+              {/* Transaction Summary Card */}
+              <div className="bg-slate-900/95 border border-emerald-500/20 rounded-2xl p-3 flex flex-row items-center justify-between gap-2 text-left">
+                <div className="space-y-1">
+                  <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest block font-bold">Before</span>
+                  <div className="text-xl font-black font-mono text-slate-300">
                     {response.LikesbeforeCommand?.toLocaleString() || '0'}
                   </div>
                 </div>
 
                 <div className="flex flex-col items-center shrink-0">
-                  <span className="text-[9px] font-black text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full animate-pulse uppercase tracking-wider mb-1">
-                    +{likesAdded} NEW LIKES
+                  <span className="text-[8px] font-black text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full animate-pulse uppercase tracking-wider mb-0.5">
+                    VIP
                   </span>
-                  <span className="text-emerald-400 text-xl font-bold">➔</span>
+                  <span className="text-emerald-400 text-lg font-bold">➔</span>
                 </div>
 
-                <div className="space-y-1 text-center sm:text-right">
-                  <span className="text-[10px] font-mono text-emerald-400 uppercase tracking-widest block font-bold">নতুন লাইক (AFTER LIKES)</span>
-                  <div className="text-3xl font-black font-mono text-emerald-400 drop-shadow-[0_0_12px_rgba(16,185,129,0.3)]">
+                <div className="space-y-1 text-right">
+                  <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block font-bold">After</span>
+                  <div className="text-2xl font-black font-mono text-emerald-400 drop-shadow-[0_0_12px_rgba(16,185,129,0.3)]">
                     {response.LikesafterCommand?.toLocaleString() || 'Injected'}
                   </div>
                 </div>
               </div>
 
               {/* Explicit explanation card */}
-              <div className="p-3.5 bg-emerald-500/5 border border-emerald-500/20 rounded-xl text-xs text-slate-200 leading-relaxed font-mono">
-                <span className="text-emerald-400 font-extrabold mr-1.5">[✔] SUCCESS SUMMARY:</span>
-                আপনার আগের লাইক ছিল <span className="text-slate-300 font-bold">{response.LikesbeforeCommand || '0'}</span> টি, নতুন <span className="text-emerald-400 font-black font-mono">+{likesAdded}</span> টি ভিআইপি লাইক সফলভাবে যুক্ত হয়েছে, বর্তমানে মোট লাইক দাঁড়িয়েছে <span className="text-emerald-400 font-bold">{response.LikesafterCommand || 'Injected'}</span> টি! পুনরায় লাইক নিতে ২৪ ঘণ্টা পর চেষ্টা করুন।
+              <div className="p-3 bg-emerald-500/5 border border-emerald-500/20 rounded-xl text-[10px] text-slate-200 leading-relaxed font-mono">
+                <span className="text-emerald-400 font-extrabold mr-1.5">[✔] SUCCESS:</span>
+                Apnar ager like chilo <span className="text-slate-300 font-bold">{response.LikesbeforeCommand || '0'}</span> ti, notun <span className="text-emerald-400 font-black font-mono">VIP</span> like sofolvabe juktto hoyeche, bortomane mot like dariyeche <span className="text-emerald-400 font-bold">{response.LikesafterCommand || 'Injected'}</span> ti!
               </div>
             </div>
           </div>

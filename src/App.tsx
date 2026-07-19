@@ -279,7 +279,7 @@ export default function App() {
                   AYAN FF SECURE MASTER SERVICE
                 </h2>
                 <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-                  যদি কোনো সমস্যা বা ঘাটতি থাকে, আমাদের <span className="text-emerald-400 font-bold">VIP Master Service Engine</span> সর্বদাই সক্রিয়। এটি রিয়েল-টাইম OB54 প্যাকেট ডেলিভারি ও সার্ভার বাইপাসিং নিশ্চিত করে আপনার আইডিকে রাখে শতভাগ সুরক্ষিত।
+                  Jodi kono somossya ba ghatti thake, amader <span className="text-emerald-400 font-bold">VIP Master Service Engine</span> sorbodai sokriyo. Eti real-time OB54 packet delivery o server bypassing nishchit kore apnar ID-ke rakhe shotovag surokhito.
                 </p>
               </div>
 
@@ -291,7 +291,7 @@ export default function App() {
                   </div>
                   <div>
                     <h4 className="text-xs font-black text-slate-200 uppercase tracking-wider">OB54 Packet Sync</h4>
-                    <p className="text-[10px] text-slate-500 mt-1 leading-relaxed">BD ও IND সার্ভার সমূহে স্বয়ংক্রিয়ভাবে সঠিক প্যাকেট সিঙ্ক করে লাইক বুস্ট করে।</p>
+                    <p className="text-[10px] text-slate-500 mt-1 leading-relaxed">BD o IND server somuhe soyongkriovabe sothik packet sync kore like boost kore.</p>
                   </div>
                 </div>
 
@@ -301,7 +301,7 @@ export default function App() {
                   </div>
                   <div>
                     <h4 className="text-xs font-black text-slate-200 uppercase tracking-wider">Fail-Safe Tunnel</h4>
-                    <p className="text-[10px] text-slate-500 mt-1 leading-relaxed">কোনো সার্ভার লাইনে ব্লকেজ বা স্পাইক দেখা দিনে স্বয়ংক্রিয় প্রক্সি বাইপাস সক্রিয় হয়।</p>
+                    <p className="text-[10px] text-slate-500 mt-1 leading-relaxed">Kono server line-e blockage ba spike dekha dile soyongkrio proxy bypass sokrio hoy.</p>
                   </div>
                 </div>
 
@@ -311,7 +311,7 @@ export default function App() {
                   </div>
                   <div>
                     <h4 className="text-xs font-black text-slate-200 uppercase tracking-wider">Anti-Ban Bypass</h4>
-                    <p className="text-[10px] text-slate-500 mt-1 leading-relaxed">Garena সিকিউরিটি ফিল্টার এড়িয়ে সম্পূর্ণ সেফ উপায়ে আপনার রেপুটেশন বৃদ্ধি করে।</p>
+                    <p className="text-[10px] text-slate-500 mt-1 leading-relaxed">Garena security filter ediye sompurno safe upaye apnar reputation bridhhi kore.</p>
                   </div>
                 </div>
 
@@ -321,7 +321,7 @@ export default function App() {
                   </div>
                   <div>
                     <h4 className="text-xs font-black text-slate-200 uppercase tracking-wider">24H Cooldown Check</h4>
-                    <p className="text-[10px] text-slate-500 mt-1 leading-relaxed">প্রতিটি আইডিতে ২৪ ঘণ্টা পর পর সফলভাবে পুনরায় লাইক নেওয়ার জন্য রিফ্রেশ হয়।</p>
+                    <p className="text-[10px] text-slate-500 mt-1 leading-relaxed">Protiti ID-te 24 ghanta por por sofolvabe punoray like neoyar jonno refresh hoy.</p>
                   </div>
                 </div>
               </div>
@@ -329,26 +329,18 @@ export default function App() {
 
             {/* Right: Custom Character Image Circular Spinning Showcase */}
             <div className="lg:col-span-5 flex flex-col items-center justify-center p-4">
-              <div className="relative w-56 h-56 sm:w-64 sm:h-64 flex items-center justify-center">
-                {/* Outermost spinning neon ring */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500 via-teal-400 to-cyan-500 rounded-full animate-spin [animation-duration:5s]" />
-                {/* Secondary opposite spinning ring */}
-                <motion.div
-                  animate={{ rotate: -360 }}
-                  transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-                  className="absolute inset-2 rounded-full border-2 border-dashed border-emerald-300/40"
-                />
+              <div className="relative w-full max-w-[500px] flex items-center justify-center group">
                 {/* Glowing pulse effect shadow */}
-                <div className="absolute -inset-2 bg-gradient-to-tr from-emerald-500 via-teal-400 to-cyan-500 rounded-full opacity-60 blur-xl animate-pulse" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500 via-teal-400 to-cyan-500 rounded-3xl opacity-20 blur-2xl animate-pulse" />
                 
                 {/* Image Mask container */}
-                <div className="relative w-[210px] h-[210px] sm:w-[240px] sm:h-[240px] rounded-full p-1 bg-slate-950 overflow-hidden flex items-center justify-center border-4 border-slate-900 shadow-inner group">
+                <div className="relative w-full aspect-[21/9] rounded-3xl p-1.5 bg-slate-950 overflow-hidden flex items-center justify-center border-4 border-slate-900 shadow-2xl z-10 transition-transform duration-500 group-hover:scale-[1.02]">
                   <motion.img
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     src={ayanAvatarImg}
                     alt="Ayan Official FF Character Avatar"
-                    className="w-full h-full object-cover rounded-full select-none"
+                    className="w-full h-full object-cover rounded-2xl select-none"
                   />
                   {/* Cyber grid glass glare overlay */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/0 pointer-events-none group-hover:translate-x-full transition-transform duration-1000" />
