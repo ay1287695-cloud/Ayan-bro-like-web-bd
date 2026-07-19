@@ -6,7 +6,6 @@
 import { useState, useEffect } from 'react';
 import { Volume2, VolumeX, Shield, Sparkles, Trophy, X, Wrench, Cpu, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import ayanAvatarImg from './assets/images/ayan_game_avatar_1784459798703.jpg';
 import { HistoryItem } from './types';
 import { AyanDeveloperCard } from './components/AyanDeveloperCard';
 import { ProfileViewer } from './components/ProfileViewer';
@@ -25,6 +24,7 @@ export default function App() {
   // Enable sound by default so users get instant dynamic feedback
   const [soundEnabled, setSoundEnabled] = useState<boolean>(true);
   const [isHistoryOpen, setIsHistoryOpen] = useState<boolean>(false);
+  const [isAvatarModalOpen, setIsAvatarModalOpen] = useState<boolean>(false);
 
   // Sync Audio system state on mount & add global tactical tap sound listeners
   useEffect(() => {
@@ -329,18 +329,22 @@ export default function App() {
 
             {/* Right: Custom Character Image Circular Spinning Showcase */}
             <div className="lg:col-span-5 flex flex-col items-center justify-center p-4">
-              <div className="relative w-full max-w-[500px] flex items-center justify-center group">
+              <div className="relative w-full max-w-[750px] flex items-center justify-center group mt-4">
                 {/* Glowing pulse effect shadow */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500 via-teal-400 to-cyan-500 rounded-3xl opacity-20 blur-2xl animate-pulse" />
                 
                 {/* Image Mask container */}
-                <div className="relative w-full aspect-[21/9] rounded-3xl p-1.5 bg-slate-950 overflow-hidden flex items-center justify-center border-4 border-slate-900 shadow-2xl z-10 transition-transform duration-500 group-hover:scale-[1.02]">
+                <div className="relative w-full aspect-video rounded-3xl p-1.5 bg-slate-950 overflow-hidden flex items-center justify-center border-4 border-slate-900 shadow-2xl z-10 transition-transform duration-500 group-hover:scale-[1.02]">
                   <motion.img
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    src={ayanAvatarImg}
+                    src="https://i.postimg.cc/GmGgTsCP/ayan-game-avatar-1784459798703.jpg"
                     alt="Ayan Official FF Character Avatar"
-                    className="w-full h-full object-cover rounded-2xl select-none"
+                    className="w-full h-full object-contain rounded-2xl select-none cursor-pointer"
+                    onClick={() => {
+                      sfx.playClick();
+                      setIsAvatarModalOpen(true);
+                    }}
                   />
                   {/* Cyber grid glass glare overlay */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/0 pointer-events-none group-hover:translate-x-full transition-transform duration-1000" />
@@ -354,6 +358,48 @@ export default function App() {
         </section>
 
       </main>
+
+      {/* Full Screen Avatar Modal */}
+      <AnimatePresence>
+        {isAvatarModalOpen && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+            {/* Blurred background overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsAvatarModalOpen(false)}
+              className="absolute inset-0 bg-slate-950/90 backdrop-blur-xl cursor-pointer"
+            />
+            
+            {/* Image display */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-6xl aspect-video rounded-3xl overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.8)] border border-slate-800 z-10 pointer-events-none"
+            >
+              <img 
+                src="https://i.postimg.cc/GmGgTsCP/ayan-game-avatar-1784459798703.jpg" 
+                alt="Ayan Official FF Character Avatar"
+                className="w-full h-full object-contain"
+              />
+            </motion.div>
+
+            {/* Close button */}
+            <button
+              onClick={() => {
+                sfx.playClick();
+                setIsAvatarModalOpen(false);
+              }}
+              className="absolute top-6 right-6 z-20 p-3 bg-slate-900/50 hover:bg-slate-800 border border-slate-700/50 rounded-full text-slate-300 hover:text-white transition-colors cursor-pointer"
+            >
+              <X size={24} />
+            </button>
+          </div>
+        )}
+      </AnimatePresence>
 
       {/* Premium History Checker Overlay Modal */}
       <AnimatePresence>

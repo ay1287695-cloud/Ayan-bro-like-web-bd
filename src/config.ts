@@ -6,7 +6,7 @@ export const CONFIG = {
   // Paste your custom picture URL below to change the header logo next to "AYAN'S FF VIP HUB"
   // Example: "https://i.imgur.com/your-image.png"
   // Set to empty string "" to use the default premium Golden Shield icon.
-  HEADER_LOGO_URL: "https://nirob-free-fire-baner.vercel.app/profile?uid=2279016714",
+  HEADER_LOGO_URL: "https://i.postimg.cc/sDWW9Y06/retouch-2026011619205800.jpg",
 
   // High Quality / Premium HD look enhancements
   PREMIUM_HD_GLOW: true,

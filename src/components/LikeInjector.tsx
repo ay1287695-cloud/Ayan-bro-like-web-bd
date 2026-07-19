@@ -464,7 +464,7 @@ export const LikeInjector: React.FC<LikeInjectorProps> = ({ uid, onUidChange, on
               {/* Explicit explanation card */}
               <div className="p-3 bg-emerald-500/5 border border-emerald-500/20 rounded-xl text-[10px] text-slate-200 leading-relaxed font-mono">
                 <span className="text-emerald-400 font-extrabold mr-1.5">[✔] SUCCESS:</span>
-                Apnar ager like chilo <span className="text-slate-300 font-bold">{response.LikesbeforeCommand || '0'}</span> ti, notun <span className="text-emerald-400 font-black font-mono">VIP</span> like sofolvabe juktto hoyeche, bortomane mot like dariyeche <span className="text-emerald-400 font-bold">{response.LikesafterCommand || 'Injected'}</span> ti!
+                Apnar ager like chilo <span className="text-slate-300 font-bold">{response.LikesbeforeCommand || '0'}</span> ti, notun <span className="text-emerald-400 font-black font-mono">{response.LikesGivenByAPI ?? ((response.LikesafterCommand || 0) - (response.LikesbeforeCommand || 0))}</span> ti like sofolvabe juktto hoyeche, bortomane mot like dariyeche <span className="text-emerald-400 font-bold">{response.LikesafterCommand || 'Injected'}</span> ti!
               </div>
             </div>
           </div>
